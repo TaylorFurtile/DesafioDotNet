@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace UI.Endpoints
+namespace DotNetDesafio.Presentation.Controller
 {
     [ApiController]
     [Route("api/aluno")]
     public class AlunoController : ControllerBase
     {
         [HttpPost]
-        public ActionResult CreateAluno([FromBody] )
+        public ActionResult CreateAluno()
         {
-
+            return Ok();
         }
     }
 }
