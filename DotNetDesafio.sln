@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetDesafio.UI", "UI\DotN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetDesafio.Application", "Application\DotNetDesafio.Application.csproj", "{B79A3E31-5B69-4C61-A4DE-D025F23F4DBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetDesafio.Test", "DotNetDesaafio.Test\DotNetDesafio.Test.csproj", "{12FFB018-4AAF-4583-972E-AD0D8353094B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetDesafio.Test", "DotNetDesaafio.Test\DotNetDesafio.Test.csproj", "{12FFB018-4AAF-4583-972E-AD0D8353094B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{83E15221-E51A-4898-9866-17489F2ABB20}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\projects\BizPik\BizPik.API\docker-compose.yml = ..\..\projects\BizPik\BizPik.API\docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

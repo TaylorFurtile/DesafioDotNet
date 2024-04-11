@@ -1,4 +1,5 @@
-namespace UI
+using DotNetDesafio.Infrastructure;
+namespace DotNetDesafio.UI
 {
     public class Program
     {
@@ -6,7 +7,9 @@ namespace UI
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddInfrastructure();
             builder.Services.AddRazorPages();
+            builder.Services.AddControllers();
 
             var app = builder.Build();
 

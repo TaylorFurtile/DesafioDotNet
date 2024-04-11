@@ -3,11 +3,16 @@
 namespace DotNetDesafio.Presentation.Controller
 {
     [ApiController]
-    [Route("api/aluno")]
+    [Route("/api/aluno")]
     public class AlunoController : ControllerBase
     {
         [HttpPost]
         public ActionResult CreateAluno()
+        {
+            return Ok();
+        }
+        [HttpGet]
+        public ActionResult GetAluno()
         {
             return Ok();
         }

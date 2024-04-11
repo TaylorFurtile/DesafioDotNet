@@ -1,20 +1,25 @@
-using Microsoft.AspNetCore.Mvc;
+using DotNetDesafio.Domain.Entities;
+using DotNetDesafio.Infrastructure.Data.Interface;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace UI.Pages
+namespace DotNetDesafio.UI.Pages
 {
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
+        private readonly IAlunoRepository _alunoRepository;
+        public IEnumerable<Aluno> alunos;
+        public IndexModel(ILogger<IndexModel> logger, IAlunoRepository alunoRepository)
         {
             _logger = logger;
+            _alunoRepository = alunoRepository;
         }
 
-        public void OnGet()
+        public async Task OnGetAsync()
         {
+            await _alunoRepository.PostAsync(new Aluno() { Id = 0, Nome = "Aluno" + DateTime.UtcNow.ToString(), Senha = "", Usuario = "" });
 
+            alunos = await _alunoRepository.GetAllAsync();
         }
     }
 }

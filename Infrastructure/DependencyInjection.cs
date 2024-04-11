@@ -1,6 +1,7 @@
 ﻿using DotNetDesafio.Infrastructure.Data;
+using DotNetDesafio.Infrastructure.Data.Interface;
+using DotNetDesafio.Infrastructure.Data.Repository;
 using Microsoft.Extensions.DependencyInjection;
-using System.Data.SqlClient;
 
 namespace DotNetDesafio.Infrastructure
 {
@@ -9,6 +10,7 @@ namespace DotNetDesafio.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
             services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
+            services.AddScoped<IAlunoRepository, AlunoRepository>();
 
             return services;
         }

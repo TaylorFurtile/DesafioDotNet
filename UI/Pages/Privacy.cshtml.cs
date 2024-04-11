@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace UI.Pages
+namespace DotNetDesafio.UI.Pages
 {
     public class PrivacyModel : PageModel
     {
